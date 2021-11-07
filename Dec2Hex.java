@@ -6,7 +6,7 @@ class Dec2Hex {
 
         try {
             if (!validateInput(args[0])) {
-                System.out.println("Input invalid. Must be a positive integer.");
+                System.out.println("Input invalid. Must be a positive integer."); //returns an error on no argument but build completes
             }
         }
         catch (ArrayIndexOutOfBoundsException e){

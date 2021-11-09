@@ -1,12 +1,15 @@
+package cw1;
+
 class Dec2Hex {
 
     public static int Arg1;
 
     public static void main(String[] args) {
 
+        //Try Catch to throw error on no input.
         try {
             if (!validateInput(args[0])) {
-                System.out.println("Input invalid. Must be a positive integer."); //returns an error on no argument but build completes
+                System.out.println("Input invalid. Must be a positive integer.");
             }
         }
         catch (ArrayIndexOutOfBoundsException e){
@@ -16,7 +19,7 @@ class Dec2Hex {
 
     }
 
-    public static boolean validateInput(String input) {
+    public static boolean validateInput(String input) { //validates input passed through by main method
         boolean valid;
 
         try {
@@ -28,12 +31,12 @@ class Dec2Hex {
         }
 
         try {
-            Arg1 = Integer.parseInt(input);
+            Arg1 = Integer.parseInt(input); //make sure input can be converted to an int value
             valid = true;
             if (Arg1 <= 0) {
-                System.out.println("Value must be a positive Int");
+                System.out.println("Value must be a positive Int"); //return error if input is not an int
             } else {
-                convertInput(input);
+                convertInput(input); //if input is an int pass to convertInput()
             }
         } catch (NumberFormatException e) {
             valid = false;
@@ -43,7 +46,7 @@ class Dec2Hex {
     }
 
 
-    public static void convertInput(String arg) {
+    public static void convertInput(String arg) { //converts integer from validateInput() to hexadecimal
         char ch[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         int rem, num;
         num = Arg1;
@@ -61,3 +64,4 @@ class Dec2Hex {
     }
 
 }
+

@@ -44,7 +44,7 @@ class Dec2Hex {
     }
 
 
-    public static void convertInput(String arg) { //converts integer from validateInput() to hexadecimal
+    public static void convertInput(int Arg1) { //converts integer from validateInput() to hexadecimal
         char ch[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         int rem, num;
         num = Arg1;

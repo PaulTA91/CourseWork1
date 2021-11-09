@@ -1,5 +1,3 @@
-package cw1;
-
 class Dec2Hex {
 
     public static int Arg1;

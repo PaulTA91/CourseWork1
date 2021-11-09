@@ -34,7 +34,7 @@ class Dec2Hex {
             if (Arg1 <= 0) {
                 System.out.println("Value must be a positive Int"); //return error if input is not an int
             } else {
-                convertInput(input); //if input is an int pass to convertInput()
+                convertInput(Arg1); //if input is an int pass to convertInput()
             }
         } catch (NumberFormatException e) {
             valid = false;
